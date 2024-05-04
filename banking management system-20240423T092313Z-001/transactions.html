@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="branchmanagement.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap">
+    <title>Transaction - Indian Bank</title>
+</head>
+<body>
+  <header class="header">
+    <nav>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="Welcome.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="AdminHome.html">Admin</a></li>
+        </ul>
+        <div class="nav__menu__btn" id="menu-btn">
+            <span><i class="ri-menu-line"></i></span>
+        </div>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <h1>Transactions</h1>
+
+    <table id="transactionTable">
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Account No</th>
+                <th>Transaction Type</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody id="transactionTableBody">
+         <!-- Transaction rows will be dynamically added here -->
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="transactions.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+/* Add your CSS styles here */
+.header {
+    position: relative;
+    isolation: isolate;
+}
+  
+  nav {
+    position: absolute;
+    width: 100%;
+    max-width: var(--max-width);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9;
+  }
+  
+  .nav__logo a img {
+    max-width: 50px;
+  }
+  
+  .nav__links {
+    list-style: none;
+    position: absolute;
+    right: 30rem;
+    top: 75px;
+    width: 100%;
+    max-width: 350px;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    display: none;
+  }
+  
+  .nav__links.open {
+    display: flex;
+  }
+  
+  .nav__links a {
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  .nav__links a:hover {
+    color: var(--white);
+  }
+  
+  .nav__menu__btn {
+    padding: 5px 11px;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--white);
+    border-radius: 5px;
+  }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration-form {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    font-size: 20px;
+}
+
+input {
+    height: 50px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+    width: calc(100% - 20px);
+}
+
+input:focus {
+    border: 2px solid blue;
+}
+
+button {
+    height: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: outset;
+    margin: 5px 30px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.banner {
+    margin-top: 5rem;
+    display: grid;
+}
+
+.banner__card {
+    padding: 2rem;
+}
+
+.banner__card:nth-child(1) {
+    position: relative;
+    isolation: isolate;
+    padding-block: 5rem;
+    background-color: #ffd457;
+}
+
+.banner__card:nth-child(2),
+.banner__card:nth-child(3),
+.banner__card:nth-child(4) {
+    background-color: #ffd457;
+}
+
+.banner__card:nth-child(3),
+.banner__card:nth-child(4) {
+    background-color: #ffc823;
+}
+
+.banner__card:nth-child(4) {
+    background-color: #ffad23;
+}
+
+.banner__card h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.banner__card p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.banner__card a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.banner__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: calc(100% + 4rem);
+    width: 100%;
+    padding-top: 4rem;
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    background-color: var(--primary-color);
+    border-top-right-radius: 100%;
+}
+.banner {
+    display: grid;
+    grid-template-columns:
+      minmax(1rem, 1fr)
+      minmax(0, calc(var(--max-width) / 4))
+      minmax(0, calc(var(--max-width) / 4))
+      minmax(0, calc(var(--max-width) / 4))
+      minmax(0, calc(var(--max-width) / 4))
+      minmax(1rem, 1fr);
+    background-color: #ffad23;
+  }
+
+  .banner__card:nth-child(1) {
+    grid-column: 1/3;
+  }

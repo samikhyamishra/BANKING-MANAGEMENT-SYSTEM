@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="AdminHome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Admin Home - Indian Bank</title>
+    <style>
+      body {
+        background-image: url('Images/pexels-codioful-7135056.jpg');
+        background-size: cover; /* Cover the entire viewport */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        /* You can add more styles as needed */
+      }
+    </style>
+<body>
+  <header class="header">
+    <nav>
+      <ul class="nav__links">
+        <li><a href="Welcome.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="createuser.html">New User</a></li>
+        <li><a href="createbranch.html">New branch</a></li>
+        <li><a href="createemployee.html">New employee</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+      </ul>
+      <div class="nav__menu__btn" id="menu-btn">
+        <span><i class="ri-menu-line"></i></span>
+      </div>
+    </nav>
+
+    <div class="header__container">
+      <div class="header__image"></div> 
+      <div class="header__content">
+        <h1>WELCOME ADMIN!</h1><br><br>
+        <a href="#" class="btn">Explore Services</a>
+      </div>
+    </div>
+  </header> 
+
+  <!-- Activity section -->
+  <div class="row activity text-center">
+    <div class="col-md act">
+        <img src="images/finance.png" class="img-fluid">
+        <br>
+        <a href="branchmanagement.html">
+            <button href=branchmanagement.html style="background-color: #2785C4;">BRANCH MANAGEMENT</button>
+        </a>
+    </div>
+    <div class="col-md act">
+        <img src="images/rich_15682967.png" class="img-fluid">
+        <br>
+        <a href="customermanagement.html">
+            <button  style="background-color: #2785C4;">CUSTOMER MANAGEMENT</button>
+        </a>
+    </div>
+    <div class="col-md act">
+        <img src="images/employee.png" class="img-fluid">
+        <br>
+        <a href="employeemanagement.html">
+            <button style="background-color: #2785C4;">EMPLOYEE MANAGEMENT</button>
+        </a>
+    </div>
+    <div class="col-md act">
+      <img src="images/pay-later.png" class="img-fluid">
+      <br>
+      <a href="transactions.html">
+          <button style="background-color: #2785C4;">ALL TRANSACTIONS</button>
+      </a>
+  </div>
+</div>
+
+
+  <!-- Banner Section -->
+  <div class="banner">
+    <div class="banner__card">
+      <div class="banner__content"> 
+        <p>Experience excellence in banking with us.</p>
+      </div>
+    </div>
+    <div class="banner__card">
+      <h4>Banking Excellence</h4>
+      <p>
+        Experience excellence with Indian Bank. Discover our specialized services
+        tailored to elevate your banking experience and achieve your financial goals.
+      </p>
+      <a href="#">Learn More</a>
+    </div>
+    <div class="banner__card">
+      <h4>Global Solutions</h4>
+      <p>
+        Discover our tailored banking services for your international needs. Simplify
+        your cross-border transactions with our range of global solutions.
+      </p>
+      <a href="#">Learn More</a>
+    </div>
+    <div class="banner__card">
+      <h4>Support</h4>
+      <p>
+        Contact Us:             <br>
+        826-0982-881(toll free) <br>
+        977-7902-113(toll free) <br>
+        898-4689-137(toll free)
+      </p>
+      <a href="#">Read More</a>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="AdminHome.js"></script>
+</body>
+</html>

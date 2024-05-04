@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="createuser.css" rel="stylesheet">
+    <title>New User Registration</title>
+</head>
+<body>
+    <div class="main-content">
+        <div class="registration-form">
+            <h2>CREATE ACCOUNT</h2>
+            <form id="registration-form">
+        
+                <div class="form-group">
+                    <label for="accountNo">Account Number</label>
+                    <input type="text" id="accountNo" name="accountNo" placeholder="Generated Automatically" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="accountType">Account Type</label>
+                    <select id="accountType" name="accountType" required>
+                        <option value="">Select Account Type</option>
+                        <option value="Savings">Savings</option>
+                        <option value="Current">Current</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="accountHolderName">Account Holder Name</label>
+                    <input type="text" id="accountHolderName" name="accountHolderName" required>
+                </div>
+                <div class="form-group">
+                    <label for="branchId">Branch ID</label>
+                    <input type="number" id="branchId" name="branchId" placeholder="Generated Automatically" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNo">Phone Number</label>
+                    <input type="tel" id="phoneNo" name="phoneNo"  pattern="[0-9]{10}"
+                      maxlength="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="userName">Username</label>
+                    <input type="text" id="userName" name="userName" required pattern="^[a-zA-Z0-9_]{3,15}$"
+                    title="Username must be 3-15 characters long and can only contain letters, numbers, and underscores">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&])[\w!@#$%^&]{8,}$" 
+                    required title="Password must contain at least one number, one alphabet, one symbol, and be at  
+                    least 8 characters long">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="register">Register</button>
+                </div>
+            </form>
+        </div>        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="createuser.js"></script>
+</body>
+</html>

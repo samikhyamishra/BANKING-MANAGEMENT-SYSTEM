@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="branchmanagement.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap">
+    <title>Branch Management - Indian Bank</title>
+</head>
+<body>
+  <header class="header">
+    <nav>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="Welcome.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="AdminHome.html">Admin</a></li>
+        </ul>
+        <div class="nav__menu__btn" id="menu-btn">
+            <span><i class="ri-menu-line"></i></span>
+        </div>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <h1>Branch Management</h1>
+
+    <table id="branchTable">
+      <thead>
+        <tr>
+          <th>Branch ID</th>
+          <th>Branch Name</th>
+          <th>Branch Address</th>
+          <th>Edit</th>
+          <th>Lock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Branch data will be inserted here dynamically -->
+        
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+<!-- Edit Branch Modal -->
+<div class="modal" id="editBranchModal">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <form id="editBranchForm">
+              <div class="modal-header">
+                  <h2 class="modal-title">Edit Branch</h2>
+              </div>
+              <div class="modal-body">
+                <label for="editBranchId">Branch Id:</label>
+                <input type="hidden" id="editBranchId" name="editBranchId" value="">
+                  <label for="editBranchName">Branch Name:</label>
+                  <input type="text" id="editBranchName" name="editBranchName" required>
+                  <label for="editBranchAddress">Branch Address:</label>
+                  <input type="text" id="editBranchAddress" name="editBranchAddress" required>
+                  <label for="editActive">Active:</label>
+                  <select id="editActive" name="editActive" required>
+                    <option value="true">Active</option>
+                    <option value="false">Inactive</option>
+                </select>
+               </div>
+              <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Edit</button>
+                  <button type="button" class="btn btn-secondary close">Close</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="branchmanagement.js"></script>
+</body>
+</html>

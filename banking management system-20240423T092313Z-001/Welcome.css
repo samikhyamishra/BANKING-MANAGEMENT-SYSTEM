@@ -1,0 +1,559 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #ff9a30;
+  --text-dark: #0a0a0a;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(220, 235, 106, 0.8);
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Style the topnav container */
+.topnav {
+  background-color: #333; /* Background color */
+  overflow: hidden; /* Clear floats */
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left; /* Float the links to the left */
+  display: block; /* Make the links behave as blocks */
+  color: #f2f2f2; /* Text color */
+  text-align: center; /* Center-align text */
+  padding: 14px 16px; /* Padding around text */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd; /* Background color on hover */
+  color: black; /* Text color on hover */
+}
+
+/* Style the active link */
+.topnav a.active {
+  background-color: #4CAF50; /* Active link background color */
+  color: white; /* Active link text color */
+}
+
+/* Style the navigation links (hidden by default) */
+#myLinks {
+  display: none; /* Hide the navigation links by default */
+}
+
+/* Style the "hamburger menu" icon */
+.topnav .icon {
+  display: none; /* Hide the icon by default */
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 600px) {
+  /* Show the navigation links on small screens */
+  .topnav a:not(:first-child) {display: none;}
+  /* Show the "hamburger menu" icon */
+  .topnav a.icon {
+    float: right; /* Float the icon to the right */
+    display: block; /* Display the icon as a block */
+  }
+}
+
+/* Style the "hamburger menu" icon when clicked */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute; /* Position the icon absolutely */
+    right: 0; /* Align the icon to the right */
+    top: 0; /* Align the icon to the top */
+  }
+  .topnav.responsive #myLinks {
+    display: block; /* Display the navigation links */
+    float: none; /* Reset the float */
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background-image: url(images/pexels-codioful-7135056.jpg);
+}
+
+.header {
+  position: relative;
+  isolation: isolate;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  max-width: var(--max-width);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9;
+}
+
+.nav__logo a img {
+  max-width: 50px;
+}
+
+.nav__links {
+  list-style: none;
+  position: absolute;
+  right: 30rem;
+  top: 75px;
+  width: 100%;
+  max-width: 350px;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  display: none;
+}
+
+.nav__links.open {
+  display: flex;
+}
+
+.nav__links a {
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.nav__links a:hover {
+  color: var(--white);
+}
+
+.nav__menu__btn {
+  padding: 5px 11px;
+  font-size: 1.5rem;
+  color: var(--white);
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--white);
+  border-radius: 5px;
+}
+.header__container {
+  display: grid;
+}
+
+.header__image {
+  position: relative;
+  isolation: isolate;
+  min-height: max(75vh, 500px);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 8rem;
+ 
+}
+
+.header__image::after {
+  background-image: url('images/istockphoto-1217218959-1024x1024.jpg');
+  position: absolute;
+  content: "";
+  top:100px;
+  left: 10rem;
+  height: 80%;
+  width: 0;
+  background-color: var(--primary-color);
+  z-index: 1;
+  animation: scroll-right 0.5s 0.3s linear forwards;
+}
+
+.header__image.reveal {
+  background-image: url("assets/header.png");
+}
+
+.header__image.reveal::after {
+  left: unset;
+  right: 0;
+  animation: scroll-left 0.5s linear forwards;
+}
+
+@keyframes scroll-right {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.header__content {
+  text-align: center;
+  padding:10 rem 1rem;
+}
+
+.header__content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: var(--text-dark);
+}
+
+.header__content h2 {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 200;
+  line-height: 3rem;
+  color: var(--text-dark);
+}
+
+.header__content p {
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+
+.card {
+  width: 80px;
+  border-radius: .75rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: .6s cubic-bezier(.28,-0.03,0,.99);
+  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.card > .row > .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: .3s;
+  transition: all .3s ease;
+}
+
+.description p {
+  color: #b0b0ba;
+  padding-top: 5px;
+}
+
+.description h4 {
+  text-transform: uppercase;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  width: 600px;
+}
+
+input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+  background-image: url('./img1.jpeg');
+}
+.card[for="c2"] {
+  background-image: url('./img2.jpeg');
+}
+.card[for="c3"] {
+  background-image: url('./img3.jpeg');
+}
+.card[for="c4"] {
+  background-image: url('./img4.jpeg');
+}
+.container{
+  width: 90%;
+  padding: 20px;
+  margin: 100px auto;
+  background:transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.service {
+  width: 250px;
+		height: 300px;
+		background: transparent;
+    margin: 0px 10px;
+    transition: 1s;
+    margin-right:200px; 
+    margin-left:200px;
+}
+
+.service:hover{
+  transform: scale(1.3);
+  background: #f18a24;
+  z-index: 2;
+  box-shadow: 2px 2px 2px #cdaeae;
+  
+}
+.service img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 1rem;
+}
+
+.service h3 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  
+}
+
+.service p {
+  color: #777;
+}
+
+.banner__card {
+  padding: 2rem;
+}
+
+.banner__card:nth-child(1) {
+  position: relative;
+  isolation: isolate;
+  padding-block: 5rem;
+  background-color: #ffd457;
+}
+
+.banner__card:nth-child(2) {
+  background-color: #ffd457;
+}
+
+.banner__card:nth-child(3) {
+  background-color: #ffc823;
+}
+
+.banner__card:nth-child(4) {
+  background-color: #ffad23;
+}
+
+.banner__card h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.banner__card p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.banner__card a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.banner__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: calc(100% + 4rem);
+  width: 100%;
+  padding-top: 4rem;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+  background-color: var(--primary-color);
+  border-top-right-radius: 100%;
+}
+
+.banner__content h2 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 5rem;
+  color: var(--text-dark);
+}
+
+.banner__content p {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.banner__content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+@media (min-width: 540px) {
+  .header__image {
+    min-height: max(75vh, 550px);
+  }
+
+  .banner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    padding: 2rem 1rem;
+  }
+
+  .nav__logo .logo-color {
+    display: flex;
+  }
+
+  .nav__logo .logo-white {
+    display: none;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    padding: 0.75rem 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 3rem;
+    flex-direction: row;
+    max-width: fit-content;
+    border-radius: 5rem;
+    background-color: rgba(255, 154, 48, 0.8);
+  }
+
+  .header__container {
+    display: grid;
+    grid-template-columns:
+      minmax(1rem, 1fr)
+      minmax(0, calc(var(--max-width) * 0.4))
+      minmax(0, calc(var(--max-width) * 0.6))
+      minmax(1rem, 1fr);
+    align-items: center;
+  }
+
+  .header__image {
+    min-height: max(75vh, 650px);
+    grid-area: 1/3/2/5;
+  }
+
+  .header__content {
+    text-align: left;
+    padding-top: 10rem;
+    grid-column: 2/3;
+  }
+
+  .header__content h1 {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+
+  .header__content h2 {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+
+  .banner {
+    display: grid;
+    grid-template-columns:
+      minmax(1rem, 1fr)
+      minmax(0, calc(var(--max-width) / 4))
+      minmax(0, calc(var(--max-width) / 4))
+      minmax(0, calc(var(--max-width) / 4))
+      minmax(0, calc(var(--max-width) / 4))
+      minmax(1rem, 1fr);
+    background-color: #ffad23;
+  }
+
+  .banner__card:nth-child(1) {
+    grid-column: 1/3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav__links {
+    padding: 0.75rem 4rem;
+    gap: 4rem;
+  }
+}
